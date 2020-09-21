@@ -14,7 +14,7 @@ COVERAGE_FOLDER=.coverage
 RELEASE_VERSION?=unset
 GOLANGCI_VERSION=v1.31.0
 
-all: generate build lint test
+all: vendor build lint test
 
 clean:
 	$(GOCMD) clean -i .
@@ -49,4 +49,4 @@ endif
 	$(GOLINT) run --config ./.golangci.yml
 
 # Setup your environment
-setup: vendor generate
+setup: vendor
