@@ -5,4 +5,4 @@ RUN make vendor && make build
 
 FROM gcr.io/distroless/base-debian10:latest
 COPY --from=build /go/src/app /
-CMD ["/diff-service"]
+CMD ["/yamllint-checkstyle"]
