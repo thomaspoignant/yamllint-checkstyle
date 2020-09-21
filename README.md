@@ -25,3 +25,6 @@ yamllint -f parsable test.yaml | yamllint-checkstyle > yamllint-junit.xml
 ## Output
 - if there are any lint errors, full Checkstyle XML will be created
 - if there are no errors, empty Checkstyle XML will be created.
+
+# How can I contribute?
+See the [contributor's guide](CONTRIBUTING.md) for some helpful tips.
