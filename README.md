@@ -1,4 +1,5 @@
 # yamllint-checkstyle convert [yamllint](https://github.com/adrienverge/yamllint) to [checkstyle](https://checkstyle.sourceforge.io/releasenotes.html) report
+[![Build Status](https://travis-ci.com/thomaspoignant/yamllint-checkstyle.svg?branch=master)](https://travis-ci.com/thomaspoignant/yamllint-checkstyle)
 
 ## Installation
 
@@ -18,7 +19,7 @@ scoop install yamllint-checkstyle
 ## Usage
 run `yamllint-checkstyle` and pass `yamllint` (with -f parsable option) output to it
 ```shell script
-yamllint -f parsable test.yaml | yamllint-checkstyle -o yamllint-junit.xml
+yamllint -f parsable test.yaml | yamllint-checkstyle > yamllint-junit.xml
 ```
 
 ## Output
