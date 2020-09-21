@@ -36,14 +36,6 @@ changelog:
       - '^test:'
       - '^examples:'
 
-dockers:
-  -
-    goos: linux
-    image_templates:
-      - thomaspoignant/{{.ProjectName}}:latest
-      - thomaspoignant/{{.ProjectName}}:{{ .Tag }}
-      - thomaspoignant/{{.ProjectName}}:v{{ .Major }}
-      - thomaspoignant/{{.ProjectName}}:v{{ .Major }}.{{ .Minor }}
 brews:
   -
     # Github repository to push the tap to.
