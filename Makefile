@@ -14,6 +14,7 @@ COVERAGE_FOLDER=.coverage
 RELEASE_VERSION?=unset
 GOLANGCI_VERSION=v1.31.0
 
+.PHONY: vendor
 all: vendor build lint test
 
 clean:
