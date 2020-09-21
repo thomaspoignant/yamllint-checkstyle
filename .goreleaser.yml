@@ -47,7 +47,7 @@ dockers:
 brews:
   -
     # Github repository to push the tap to.
-    github:
+    tap:
       owner: thomaspoignant
       name: homebrew-tap
 
