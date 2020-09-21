@@ -4,7 +4,6 @@
 [![Coverage Status](https://coveralls.io/repos/github/thomaspoignant/yamllint-checkstyle/badge.svg?branch=master)](https://coveralls.io/github/thomaspoignant/yamllint-checkstyle?branch=master)
 [![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=thomaspoignant_yamllint-checkstyle&metric=alert_status)](https://sonarcloud.io/dashboard?id=thomaspoignant_yamllint-checkstyle)
 ![Go version](https://img.shields.io/github/go-mod/go-version/thomaspoignant/yamllint-checkstyle?logo=go%20version "Go version")
-[![Docker Image Version (latest semver)](https://img.shields.io/docker/v/thomaspoignant/yamllint-checkstyle?color=blue&logo=docker&sort=semver)](https://hub.docker.com/r/thomaspoignant/yamllint-checkstyle)
 
 ## Installation
 
@@ -24,7 +23,7 @@ scoop install yamllint-checkstyle
 ## Usage
 run `yamllint-checkstyle` and pass `yamllint` (with `-f` parsable option) output to it
 ```shell script
-yamllint -f parsable test.yaml | yamllint-checkstyle > yamllint-junit.xml
+yamllint -f parsable test.yaml | yamllint-checkstyle > yamllint-checkstyle.xml
 ```
 
 ## Output
