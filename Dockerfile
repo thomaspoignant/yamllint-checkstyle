@@ -1,7 +1,8 @@
-FROM alpine:latest as cert
-RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
+FROM golang:1.15 as build
+WORKDIR /go/src/app
+COPY . /go/src/app
+RUN make vendor && make build
 
-FROM scratch
-COPY --from=cert /etc/ssl /etc/ssl
-COPY yamllint-checktyle /
-ENTRYPOINT ["/yamllint-checkstyle"]
+FROM gcr.io/distroless/base-debian10:latest
+COPY --from=build /go/src/app /
+CMD ["/diff-service"]
