@@ -7,7 +7,7 @@ import (
 
 	"github.com/thomaspoignant/yamllint-checkstyle/checkstyle"
 )
-var ExtractRegex = regexp.MustCompile(`^([^:]*):([1-9]*):([1-9]*): \[(.*)\] (.*) \((.*)\)$`)
+var ExtractRegex = regexp.MustCompile(`^([^:]*):([0-9]*):([0-9]*): \[(.*)\] (.*) \((.*)\)$`)
 func YamlLintExtractor(inputLine string) (string, checkstyle.Error, error){
 	extractedRegex := ExtractRegex.FindAllStringSubmatch(inputLine, -1)
 	if len(extractedRegex) >0 {
