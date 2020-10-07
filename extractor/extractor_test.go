@@ -20,7 +20,8 @@ func TestYamlLintExtractor(t *testing.T) {
 	}{
 		{
 			name: "yamllint valid line with parentheses",
-			inputLine:"search_infra/eks_addons/argocd/manifest/values.yaml:195:101: [error] line too long (399 > 100 characters) (line-length)",
+			inputLine:"search_infra/eks_addons/argocd/manifest/values.yaml:195:101: [error] line too long (399 > " +
+				"100 characters) (line-length)",
 			wantErr: false,
 			want: want{
 				filename: "search_infra/eks_addons/argocd/manifest/values.yaml",
